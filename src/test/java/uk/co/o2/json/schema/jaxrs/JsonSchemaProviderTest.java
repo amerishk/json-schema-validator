@@ -1,6 +1,7 @@
 package uk.co.o2.json.schema.jaxrs;
 
 import org.junit.Test;
+
 import uk.co.o2.json.schema.ErrorMessage;
 
 import javax.ws.rs.PathParam;
@@ -8,6 +9,7 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
@@ -136,5 +138,29 @@ public class JsonSchemaProviderTest {
         public V getFirst(K key) {
             return null;
         }
+
+		@Override
+		public void addAll(K key, V... newValues) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void addAll(K key, List<V> valueList) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void addFirst(K key, V value) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public boolean equalsIgnoreValueOrder(MultivaluedMap<K, V> otherMap) {
+			// TODO Auto-generated method stub
+			return false;
+		}
     } 
 }
