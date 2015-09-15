@@ -2,6 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>uk.co.o2</groupId>
+  <artifactId>json-schema-validator</artifactId>
   <packaging>jar</packaging>
   <version>1.0.0</version>
   <name>json-schema-validator</name>
@@ -53,8 +54,10 @@
 		<version>2.4.1</version>
 	</dependency>
   </dependencies>
+  
   <build>
-		<finalName>${project.artifactId}</finalName>
+  		<directory>${project.basedir}/uk/co/o2/${project.artifactId}/${project.version}/</directory>
+		<finalName>${project.artifactId}-${project.version}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -79,7 +82,7 @@
 		  </plugin>
 		</plugins>
 	</build>
-  <artifactId>json-schema-validator</artifactId>
+  
   <scm>
   	<url>https://github.com/amerishk/json-schema-validator</url>
   </scm>
