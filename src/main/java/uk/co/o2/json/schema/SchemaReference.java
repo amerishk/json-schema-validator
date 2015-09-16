@@ -5,11 +5,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.net.URL;
 import java.util.List;
 
-class SchemaReference implements JsonSchema {
+public class SchemaReference implements JsonSchema {
     private final SchemaPassThroughCache registry;
     private final URL schemaLocation;
 
-    SchemaReference(SchemaPassThroughCache registry, URL schemaLocation) {
+    public SchemaReference(SchemaPassThroughCache registry, URL schemaLocation) {
         this.registry = registry;
         this.schemaLocation = schemaLocation;
     }
@@ -33,11 +33,11 @@ class SchemaReference implements JsonSchema {
         return registry.getSchema(schemaLocation);
     }
 
-    SchemaPassThroughCache getRegistry() {
+    public SchemaPassThroughCache getRegistry() {
         return registry;
     }
 
-    URL getSchemaLocation() {
+    public URL getSchemaLocation() {
         return schemaLocation;
     }
 }
