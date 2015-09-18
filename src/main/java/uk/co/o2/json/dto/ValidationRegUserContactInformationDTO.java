@@ -19,7 +19,7 @@ import uk.co.o2.json.constants.Constants;
 @Scope(Constants.PROTOTYPE)
 @Qualifier(Constants.JSON_REG_USER_CONTACT_INFORMATION_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class RegUserContactInformationDTO implements Serializable {
+public class ValidationRegUserContactInformationDTO implements Serializable {
   /**
    * Holds the instance of serialVersionUID
    */

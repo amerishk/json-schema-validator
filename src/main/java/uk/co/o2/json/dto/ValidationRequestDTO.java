@@ -21,7 +21,7 @@ import uk.co.o2.json.constants.Constants;
 @Scope(Constants.PROTOTYPE)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(Include.NON_EMPTY)
-public class RequestDTO implements Serializable {
+public class ValidationRequestDTO implements Serializable {
   
   /**
    * Variable for Serial version UID

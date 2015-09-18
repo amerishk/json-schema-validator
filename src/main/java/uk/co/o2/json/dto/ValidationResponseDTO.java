@@ -19,7 +19,7 @@ import uk.co.o2.json.constants.Constants;
 @Scope(Constants.PROTOTYPE)
 @Qualifier(Constants.JSON_RESPONSE_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ResponseDTO implements Serializable {
+public class ValidationResponseDTO implements Serializable {
   
   /**
    * Holds the instance of serialVersionUID
@@ -29,19 +29,19 @@ public class ResponseDTO implements Serializable {
   /**
    * Holds the list of api messages response
    */
-  private List<MessageDTO> apiMessages;
+  private List<ValidationMessageDTO> apiMessages;
   
   /**
    * Holds the payload of response generated which includes information such as personal and contact
    * information
    */
   
-  private PayloadResponseDTO payload;
+  private ValidationPayloadResponseDTO payload;
   
   /**
    * @return the apiMessages
    */
-  public List<MessageDTO> getApiMessages() {
+  public List<ValidationMessageDTO> getApiMessages() {
     return apiMessages;
   }
   
@@ -49,14 +49,14 @@ public class ResponseDTO implements Serializable {
    * @param apiMessages the apiMessages to set
    */
   public void setApiMessages(
-      List<MessageDTO> apiMsg) {
+      List<ValidationMessageDTO> apiMsg) {
     this.apiMessages = apiMsg;
   }
   
   /**
    * @return the payload
    */
-  public PayloadResponseDTO getPayload() {
+  public ValidationPayloadResponseDTO getPayload() {
     return payload;
   }
   
@@ -64,7 +64,7 @@ public class ResponseDTO implements Serializable {
    * @param payload the payload to set
    */
   public void setPayload(
-      PayloadResponseDTO payloadData) {
+      ValidationPayloadResponseDTO payloadData) {
     this.payload = payloadData;
   }
   

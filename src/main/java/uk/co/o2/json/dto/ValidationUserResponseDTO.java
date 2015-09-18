@@ -18,7 +18,7 @@ import uk.co.o2.json.constants.Constants;
 @Scope(Constants.PROTOTYPE)
 @Qualifier(Constants.JSON_USER_RESPONSE_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserResponseDTO implements Serializable {
+public class ValidationUserResponseDTO implements Serializable {
   /**
    * Holds the instance of serialVersionUID
    */
@@ -28,17 +28,17 @@ public class UserResponseDTO implements Serializable {
    * socialSecurityNumber
    */
   
-  private RegUserContactInformationDTO contactInformation;
+  private ValidationRegUserContactInformationDTO contactInformation;
   /**
    * Holds user relates contact information such as as mobilePhone, homePhone, workPhone ,email etc.
    */
   
-  private EnrollmentDTO enrollment;
+  private ValidationEnrollmentDTO enrollment;
   
   /**
    * @return the contactInformation
    */
-  public RegUserContactInformationDTO getContactInformation() {
+  public ValidationRegUserContactInformationDTO getContactInformation() {
     return contactInformation;
   }
   
@@ -46,7 +46,7 @@ public class UserResponseDTO implements Serializable {
    * @param contactInformation the contactInformation to set
    */
   public void setContactInformation(
-      RegUserContactInformationDTO contactInfo) {
+      ValidationRegUserContactInformationDTO contactInfo) {
     this.contactInformation = contactInfo;
   }
   
@@ -60,7 +60,7 @@ public class UserResponseDTO implements Serializable {
   /**
    * @return the enrollment
    */
-  public EnrollmentDTO getEnrollment() {
+  public ValidationEnrollmentDTO getEnrollment() {
     return enrollment;
   }
   
@@ -68,7 +68,7 @@ public class UserResponseDTO implements Serializable {
    * @param enrollment the enrollment to set
    */
   public void setEnrollment(
-      EnrollmentDTO enrollmentObj) {
+      ValidationEnrollmentDTO enrollmentObj) {
     this.enrollment = enrollmentObj;
   }
   

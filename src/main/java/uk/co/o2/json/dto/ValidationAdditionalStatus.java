@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Scope(Constants.PROTOTYPE)
 @Qualifier(Constants.JSON_ADDITIONAL_STATUS_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AdditionalStatus implements Serializable {
+public class ValidationAdditionalStatus implements Serializable {
   /**
    * Variable for Serial version UID
    */

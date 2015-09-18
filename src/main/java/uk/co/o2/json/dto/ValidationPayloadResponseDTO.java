@@ -19,7 +19,7 @@ import uk.co.o2.json.constants.Constants;
 @Scope(Constants.PROTOTYPE)
 @Qualifier(Constants.JSON_PAYLOAD_RESPONSE_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PayloadResponseDTO implements Serializable {
+public class ValidationPayloadResponseDTO implements Serializable {
   
   /**
    * Holds the instance of serialVersionUID
@@ -30,12 +30,12 @@ public class PayloadResponseDTO implements Serializable {
    * Holds the account information of user including personal and contact information
    */
   
-  private UserResponseDTO user;
+  private ValidationUserResponseDTO user;
   
   /**
    * @return the user
    */
-  public UserResponseDTO getUser() {
+  public ValidationUserResponseDTO getUser() {
     return user;
   }
   
@@ -43,7 +43,7 @@ public class PayloadResponseDTO implements Serializable {
    * @param user the user to set
    */
   public void setUser(
-      UserResponseDTO userResObj) {
+      ValidationUserResponseDTO userResObj) {
     this.user = userResObj;
   }
   

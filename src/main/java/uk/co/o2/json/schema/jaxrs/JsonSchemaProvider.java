@@ -21,8 +21,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import uk.co.o2.json.constants.Constants;
 import uk.co.o2.json.constants.MessageConstants;
-import uk.co.o2.json.dto.MessageDTO;
-import uk.co.o2.json.dto.ResponseDTO;
+import uk.co.o2.json.dto.ValidationMessageDTO;
+import uk.co.o2.json.dto.ValidationResponseDTO;
 import uk.co.o2.json.message.Messages;
 import uk.co.o2.json.schema.ErrorMessage;
 import uk.co.o2.json.schema.JsonSchema;
@@ -171,12 +171,12 @@ public class JsonSchemaProvider extends JacksonJsonProvider {
 	protected Response generateErrorResponse(
 	        List<ErrorMessage> validationErrors) {
 		StringBuilder content = null;
-		List<MessageDTO> errorMessages = new ArrayList<MessageDTO>();
-		MessageDTO errorMessage = null;
+		List<ValidationMessageDTO> errorMessages = new ArrayList<ValidationMessageDTO>();
+		ValidationMessageDTO errorMessage = null;
 		for (ErrorMessage error : validationErrors) {
 			content = new StringBuilder();
 			contentBuilder(content, error);
-			errorMessage = new MessageDTO();
+			errorMessage = new ValidationMessageDTO();
 			java.util.Date date = new java.util.Date();
 			/** Creating the error message for each field validation failure **/
 			errorMessage.setDateCreated(date.toString());
@@ -185,7 +185,7 @@ public class JsonSchemaProvider extends JacksonJsonProvider {
 			errorMessage.setElementName(error.getLocation());
 			errorMessages.add(errorMessage);
 		}
-		ResponseDTO response = new ResponseDTO();
+		ValidationResponseDTO response = new ValidationResponseDTO();
 		response.setApiMessages(errorMessages);
 		
 		return Response.status(Response.Status.BAD_REQUEST).type(MediaType.APPLICATION_JSON).entity(response).build();

@@ -21,7 +21,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Scope(Constants.PROTOTYPE)
 @JsonIgnoreProperties(ignoreUnknown = true)
 //@JsonInclude(Include.NON_EMPTY)
-public class MessageDTO implements Serializable {
+public class ValidationMessageDTO implements Serializable {
   
   /**
    * Variable for Serial version UID
@@ -47,12 +47,12 @@ public class MessageDTO implements Serializable {
   /**
    * Holds the list of additional status of the response
    */
-  private List<AdditionalStatus> additionalStatus;
+  private List<ValidationAdditionalStatus> additionalStatus;
   
   /**
    * @return the additionalStatus
    */
-  public List<AdditionalStatus> getAdditionalStatus() {
+  public List<ValidationAdditionalStatus> getAdditionalStatus() {
     return additionalStatus;
   }
   
@@ -87,7 +87,7 @@ public class MessageDTO implements Serializable {
    * @param additionalStatus the additionalStatus to set
    */
   public void setAdditionalStatus(
-      List<AdditionalStatus> additionalStatusData) {
+      List<ValidationAdditionalStatus> additionalStatusData) {
     this.additionalStatus = additionalStatusData;
   }
   
@@ -118,12 +118,12 @@ public class MessageDTO implements Serializable {
    * simply be passed back as is.
    */
   
-  private RequestDTO request;
+  private ValidationRequestDTO request;
   
   /**
    * @return the request
    */
-  public RequestDTO getRequest() {
+  public ValidationRequestDTO getRequest() {
     return request;
   }
   
@@ -131,7 +131,7 @@ public class MessageDTO implements Serializable {
    * @param request the request to set
    */
   public void setRequest(
-      RequestDTO requestData) {
+      ValidationRequestDTO requestData) {
     this.request = requestData;
   }
   
