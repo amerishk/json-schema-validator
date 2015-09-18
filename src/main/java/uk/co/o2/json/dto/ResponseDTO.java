@@ -17,7 +17,7 @@ import uk.co.o2.json.constants.Constants;
  */
 @Component
 @Scope(Constants.PROTOTYPE)
-@Qualifier(Constants.RESPONSE_DTO)
+@Qualifier(Constants.JSON_RESPONSE_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ResponseDTO implements Serializable {
   

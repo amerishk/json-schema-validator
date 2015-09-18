@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  * @author Sapient
  */
 @Component
-@Qualifier(Constants.MESSAGE_DTO)
+@Qualifier(Constants.JSON_MESSAGE_DTO)
 @Scope(Constants.PROTOTYPE)
 @JsonIgnoreProperties(ignoreUnknown = true)
 //@JsonInclude(Include.NON_EMPTY)

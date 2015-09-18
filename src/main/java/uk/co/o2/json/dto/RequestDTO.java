@@ -17,7 +17,7 @@ import uk.co.o2.json.constants.Constants;
  * @author Sapient
  */
 @Component
-@Qualifier(Constants.REQUEST_DTO)
+@Qualifier(Constants.JSON_REQUEST_DTO)
 @Scope(Constants.PROTOTYPE)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(Include.NON_EMPTY)

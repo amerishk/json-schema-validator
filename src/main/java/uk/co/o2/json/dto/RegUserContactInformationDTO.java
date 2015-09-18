@@ -17,7 +17,7 @@ import uk.co.o2.json.constants.Constants;
  */
 @Component
 @Scope(Constants.PROTOTYPE)
-@Qualifier(Constants.REG_USER_CONTACT_INFORMATION_DTO)
+@Qualifier(Constants.JSON_REG_USER_CONTACT_INFORMATION_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RegUserContactInformationDTO implements Serializable {
   /**

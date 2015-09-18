@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @Component
 @Scope(Constants.PROTOTYPE)
-@Qualifier(Constants.ADDITIONAL_STATUS_DTO)
+@Qualifier(Constants.JSON_ADDITIONAL_STATUS_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AdditionalStatus implements Serializable {
   /**

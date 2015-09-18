@@ -139,7 +139,7 @@ public class Constants {
 	/**
 	 * constant for message DTO
 	 */
-	public static final String MESSAGE_DTO = "messageDTO";
+	public static final String JSON_MESSAGE_DTO = "jsonMessageDTO";
 
 	/**
 	 * constant for prototype DTO
@@ -149,12 +149,12 @@ public class Constants {
 	/**
 	 * constant for ADDITIONAL_STATUS_DTO
 	 */
-	public static final String ADDITIONAL_STATUS_DTO = "additionalStatus";
+	public static final String JSON_ADDITIONAL_STATUS_DTO = "jsonAdditionalStatus";
 	
 	/**
 	 * constant for request dto DTO
 	 */
-	public static final String REQUEST_DTO = "requestDTO";
+	public static final String JSON_REQUEST_DTO = "jsonRequestDTO";
 	
 	/** Constant for "Error" while login. */
 	public static final String ERROR = "error";
@@ -162,25 +162,25 @@ public class Constants {
 	/**
 	 * constant for user response DTO
 	 */
-	public static final String RESPONSE_DTO = "responseDTO";
+	public static final String JSON_RESPONSE_DTO = "jsonResponseDTO";
 	
 	/**
 	 * constant for payload response DTO
 	 */
-	public static final String PAYLOAD_RESPONSE_DTO = "payloadResponseDTO";
+	public static final String JSON_PAYLOAD_RESPONSE_DTO = "jsonPayloadResponseDTO";
 	
 	/**
 	 * constant for User response DTO
 	 */
-	public static final String USER_RESPONSE_DTO = "userResponseDTO";
+	public static final String JSON_USER_RESPONSE_DTO = "jsonUserResponseDTO";
 
 	/**
 	 * constant for user contact info DTO
 	 */
-	public static final String REG_USER_CONTACT_INFORMATION_DTO = "regUserContactInformationDTO";
+	public static final String JSON_REG_USER_CONTACT_INFORMATION_DTO = "jsonRegUserContactInformationDTO";
 
 	/**
 	 * constant for verify enrollment DTO
 	 */
-	public static final String VERIFY_ENROLLMENT_DTO = "enrollmentDTO";
+	public static final String JSON_VERIFY_ENROLLMENT_DTO = "jsonEnrollmentDTO";
 }

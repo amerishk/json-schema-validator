@@ -17,7 +17,7 @@ import uk.co.o2.json.constants.Constants;
  */
 @Component
 @Scope(Constants.PROTOTYPE)
-@Qualifier(Constants.VERIFY_ENROLLMENT_DTO)
+@Qualifier(Constants.JSON_VERIFY_ENROLLMENT_DTO)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EnrollmentDTO implements Serializable {
   
