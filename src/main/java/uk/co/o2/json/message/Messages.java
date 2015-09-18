@@ -22,7 +22,7 @@ public class Messages implements InitializingBean, DisposableBean {
 	 */
 	@Autowired
 	@Qualifier(Constants.VALIDATION_MESSAGES_SOURCE)
-	private ReloadableResourceBundleMessageSource messagesSource;
+	private ReloadableResourceBundleMessageSource validationMessagesSource;
 	
 	/**
 	 * Holds the instance of ARR__EMPTY_OBJECT
@@ -41,7 +41,7 @@ public class Messages implements InitializingBean, DisposableBean {
 	 * @return
 	 */
 	public ReloadableResourceBundleMessageSource getMessagesSource() {
-		return messagesSource;
+		return validationMessagesSource;
 	}
 	
 	/**
@@ -50,8 +50,8 @@ public class Messages implements InitializingBean, DisposableBean {
 	 * @param messagesSource
 	 */
 	public void setMessagesSource(
-	        ReloadableResourceBundleMessageSource messagesSource) {
-		this.messagesSource = messagesSource;
+	        ReloadableResourceBundleMessageSource validationMessagesSource) {
+		this.validationMessagesSource = validationMessagesSource;
 	}
 	
 	/**
@@ -139,7 +139,7 @@ public class Messages implements InitializingBean, DisposableBean {
 	        Object[] args) {
 		try {
 			String msgPropNameToUse = msgPropName;
-			return messagesSource.getMessage(msgPropNameToUse, args, defaultMessage, locale);
+			return validationMessagesSource.getMessage(msgPropNameToUse, args, defaultMessage, locale);
 		} catch (NoSuchMessageException e) {
 			return Constants.EMPTY_STRING;
 		}
